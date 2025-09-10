@@ -48,6 +48,11 @@ docker run --rm -it <nombre-de-la-imagen> /bin/sh
 docker build -t network-troubleshooting:latest .
 ```
 
+## (opcional) subir imagen a un repositorio
+```bash
+docker tag network-troubleshooting:latest url-repo/network-troubleshooting:latest
+docker push  url-repo/network-troubleshooting:latest
+```
 ## Autor
 
 Repositorio creado para facilitar el troubleshooting de red en entornos Kubernetes y Docker.
