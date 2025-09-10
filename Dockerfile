@@ -1,10 +1,7 @@
-FROM busybox:latest
+FROM ubuntu:24.04
 
-# Instala utilidades de red adicionales
 RUN apt update && \
-    apt install -y iproute2 iputils-ping net-tools dnsutils curl wget tcpdump && \
+    apt install -y iproute2 iputils-ping net-tools dnsutils curl wget tcpdump netcat && \
     rm -rf /var/lib/apt/lists/*
-
-ENV PATH="/tools:$PATH"
 
 CMD ["/bin/sh"]
